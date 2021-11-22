@@ -3,13 +3,37 @@ variable "project_name" {
 }
 
 variable "project_id" {
-  default = "demoterraformk8sgketraefik"
+  default = "free-tier-1"
 }
 
 variable "region" {
-  default = "europe-west3"
+  default = "us-east1"
 }
 
-variable "machine-type" {
-  default = "f1-micro"
+variable "zone" {
+  default = "us-east1-b"
+}
+
+variable "credentials" {
+  default = "~/.config/gcloud/sa-terraform.free-tier-1.json"
+}
+
+variable "machine_type" {
+    default = "e2-small"
+}
+
+variable "preemtible" {
+    default = true
+}
+
+variable "kubernetes_min_ver" {
+  default = "latest"
+}
+
+variable "kubernetes_max_ver" {
+  default = "latest"
+}
+
+variable "app_name" {
+  default = "test"
 }
